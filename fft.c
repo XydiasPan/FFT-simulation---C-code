@@ -47,7 +47,7 @@ int main(void){
        scale_factor -> A typical value used to custom-normalise data visualized in printing commands below
 
        t -> A clock_t element used to identify the time consumed by our PC to apply fft and return the results. Notice that PCs usually run at 3+ GHz clock, 
-       so our mcu board will probably scale the total time up by a factor equal to 3+GHz/16MHz.
+       so our mcu board will probably scale the total time up by a factor equal to 3+GHz/fclock MHz.
 
        inputBuf -> A typical buffer of SAMPLES elements which stores the input data. 
        This buffer was pre-constructed to check if fft works well (e.g, there is a sum of three different sines). In normal cases, this buffer will be updaited on each 
