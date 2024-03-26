@@ -1,7 +1,7 @@
 # FFT Simulation - C Code
 
 ## Overview
-This repository contains the Fast Fourier Transform (FFT) implementation in C code, developed by [Your Name]. The FFT algorithm is applied to parallel real data stored in a single buffer. The repository includes the initialization function, complex element type, and the main FFT algorithm. Additionally, a time variable is provided to measure the time taken for the FFT operation.
+This repository contains the Fast Fourier Transform (FFT) implementation in C code, developed by Panagiotis Xydias. The FFT algorithm is applied to parallel real data stored in a single buffer. The repository includes the initialization function, complex element type, and the main FFT algorithm. Additionally, a time variable is provided to measure the time taken for the FFT operation.
 
 ## File Structure
 - **init_fft**: This method initializes the array W of type `cplx`, which holds cosine/sine values on each index. Each element is computed to the index returned by the product k*n. If the product is greater than N, the cosine/sine value is a sum of L*2*PI (where L is an integer) + phase. The "phase" part should only be evaluated for that index, but it will not result in a new number in comparison with the current ones stored in the array. By using this methodology, the total RAM space needed to store all the elements in array W is reduced. Note that 1 float = 4 Bytes, so 1 cplx item = 8 Bytes.
